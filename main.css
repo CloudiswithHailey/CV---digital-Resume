@@ -1,252 +1,98 @@
-/* Global defaults */
 * {
-    font-family: "Roboto", "Times New Roman", Arial, sans-serif;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
 }
-
-html, body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    background-color: #0c0414;
-    color: #a4bebb;
+body {
+  background: #0c0414;
+  color: #e0e0e0;
+  line-height: 1.6;
 }
-/* Header/hero section */
-.main {
-    display: flex;
-    flex-flow: row nowrap;
-    background-color: 412485;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 32px;
+.cv-wrapper {
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px;
 }
-
-.main > p {
-    color: #a4bebb;
-    font-weight: 900;
-    font-size: 42px;
-    background-color: #412485;
-    border-radius: 32px;
-    
-    margin: 0;
-    margin-left: 15%;
-    margin-right: 0%;
+.cv-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #412485;
+  color: #fff;
+  padding: 20px;
+  border-radius: 10px;
 }
-
-/* Profile image */
-img {
-    width: 400px;
-    height: 400px;
-    border-radius: 20px;
-    border: solid 8px #412485;
-    margin-right: 15%;
-
+.cv-header .name {
+  font-size: 2em;
+  font-weight: 700;
+  margin-bottom: 10px;
 }
-
-/* Container for content sections */
-.container {
-    display: flex;
-    flex: 1;
-    flex-flow: column nowrap;
-    background-color: #0c0414;
-    padding: 10px;
-    gap: 10px;
-    justify-content: stretch;
-    margin-left: 15%;
-    margin-right: 15%;
-    margin-bottom: 0px;
-
+.cv-header img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 4px solid #fff;
+  object-fit: cover;
 }
-
-
-.description > h1 {
-    margin: 0 0 8px 0;
+.cv-section {
+  margin-top: 30px;
+  background: #1a1024;
+  padding: 20px;
+  border-radius: 10px;
 }
-
-/* Right column */
-.right {
-    display: flex;
-    flex: auto;
-    background-color: #412485;
-    border-radius: 10px;
-    color: #a4bebb;
-    padding: 16px;
-    justify-content: center;
-    align-items: center;
+.cv-section h2 {
+  font-size: 1.5em;
+  color: #c9a0ff;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #412485;
+  padding-bottom: 5px;
 }
-
-/* Responsive design */
-@media (max-width: 768px) {
-    .container {
-        flex-flow: column nowrap;
-    }
-    .left, .right {
-        max-width: 100%;
-    }
-    .main {
-        order: 0;
-        flex-flow: column nowrap;
-        text-align: center;
-        margin-left: 0;
-    }
+.edu-entry, .work-entry {
+  margin-bottom: 20px;
 }
-.footer {
-    display: flex;
-    background-color: black;
-    color: white;
-    justify-content: center;
-
+.edu-entry h3, .work-entry h3 {
+  font-size: 1.2em;
+  color: #fff;
+  margin-bottom: 5px;
 }
-.bottext1 h1, .bottext2 h1, .bottext3 h1 {
-    font-size: 24px;
-    margin-bottom: 10px;
-    color: white;
-    display: flex;
-    justify-content: center;
-    
+ul {
+  margin-top: 5px;
+  padding-left: 20px;
 }
-
-.bottext1 p, .bottext2 p, .bottext3 p {
-    display: flex;
-    font-size: 16px;
-    color: white;
+.skills-grid {
+  display: flex;
+  gap: 20px;
 }
-.bottext1, .bottext2, .bottext3 {
-    display: flex;
-    flex-flow: column nowrap;
-    background-color: #412485;
-    padding: 20px;
-    border-radius: 10px;
-    flex: 1;
-    min-width: 250px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    justify-content: center;
-
-    
+.skills-grid div {
+  flex: 1;
+  background: #2a1a3d;
+  padding: 15px;
+  border-radius: 8px;
 }
-.aboutMe_bottom {
-    display: flex;
-    flex-flow: column nowrap;
-    gap: 10px;
-    background-color: darkblue;
-    padding-left: 15%;
-    padding-right: 15%; 
+.skills-grid h3 {
+  margin-bottom: 10px;
+  color: #c9a0ff;
 }
-.mainText h1, .description h1 {
-    display: flex;
-    justify-content: center;
+.interests-grid {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
 }
-.interests {
-    display: flex;
-    justify-content: center;
-    font-size: 2em;
-    background-color: purple;
-    border-radius: 10px;
-    margin-top: 10px;
+.interests-grid div {
+  flex: 1;
+  background: #2a1a3d;
+  padding: 15px;
+  border-radius: 8px;
+  min-width: 250px;
 }
-.aboutMe {
-    display: flex;
-    flex-flow: column nowrap;
-    background-color: purple;
-    color: white;
-    padding: 20px;
-    border-radius: 10px;
-    margin-top: 0px;
+.interests-grid h3 {
+  margin-bottom: 10px;
+  color: #c9a0ff;
 }
-.centt {
-    display: flex;
-    justify-content: center;
-}
-.column_2 {
-    display: flex;
-    flex-flow: row nowrap;
-
-}
-.col1, .col2 {
-    display: flex;
-    flex: 1;
-    flex-flow: column;
-    align-items: center;
-    text-align: center;
-}
-.education {
-    justify-content: center;
-}
-
-.col1 > h2 .col2 > h2 {
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-}
-.awards {
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    text-align: center;
-}
-.top2 {
-    display: flex;
-    flex-flow: row nowrap;
-    gap: 10px;
-}
-.we {
-    display: flex;
-    flex-flow: column nowrap;
-    background-color: purple;
-    border-radius: 10px;
-    color: white;
-    padding: 20px;
-    margin-bottom: 10px;
-}
-
-.bot2 > .we {
-    display: flex;
-    margin-bottom: 0%;
-}
-.botcol {
-    display: flex;
-    flex-flow: column nowrap;
-    text-align: center;
-}
-.main {
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: flex-start;
-    gap: 10px;
-}
-.left {
-    display: flex;
-    flex: 1;
-    flex-direction: column;
-    padding: 16px;
-    padding-left: 0%;
-    padding-right: 0%;
-    margin: 0;
-    border-radius: 10px;
-    max-width: auto;
-    color: #fff;
-    margin-left: 15%;
-    align-items: start;
-}
-.left p.name {
-    background-color: purple;
-    border-radius: 20px;
-    padding: 16px;
-    display: flex;
-    justify-content: start;
-    width: fit-content;
-    font-size: 2em;
-}
-.description {
-    text-align: start;
-    background-color: purple;
-    border-radius: 10px;
-    padding: 16px;
-    padding-top: 0px;
-    padding-bottom: 0px;
-    
-}
-.name {
-    border-radius: 50%;
+.cv-footer {
+  margin-top: 30px;
+  text-align: center;
+  color: #bbb;
+  font-size: 0.9em;
 }
